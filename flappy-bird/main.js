@@ -3,7 +3,7 @@ var SPEED = 190;
 var GRAVITY = 15;
 var FLAP = 350;
 var SPAWN_RATE = 1 / 2;
-var OPENING = 220;
+var OPENING = 200;
 
 
 WebFontConfig = {
@@ -80,6 +80,7 @@ function create() {
     // Set world dimensions
     var screenWidth = parent.clientWidth > window.innerWidth ? window.innerWidth : parent.clientWidth;
     var screenHeight = parent.clientHeight > window.innerHeight ? window.innerHeight : parent.clientHeight;
+
     game.world.width = screenWidth;
     game.world.height = screenHeight;
     // Draw bg
@@ -121,7 +122,7 @@ function create() {
         game.world.height / 4,
         "",
         {
-            font: '16px "Press Start 2P"',
+            font: '12px "Press Start 2P"',
             fill: '#fff',
             stroke: '#430',
             strokeThickness: 4,
@@ -200,7 +201,7 @@ function start() {
     fingersTimer = new Phaser.Timer(game);
     fingersTimer.onEvent.add(spawnFingers);
     fingersTimer.start();
-    fingersTimer.add(2);
+    fingersTimer.add(1);
     // Show score
     scoreText.setText(score);
     instText.renderable = false;

@@ -57,10 +57,10 @@ h1.title {
   position: relative;
   display: inline-block;
   background: #bbada0;
-  padding: 15px 25px;
-  font-size: 25px;
-  height: 25px;
-  line-height: 47px;
+  padding: 10px 25px;
+  font-size: 20px;
+  height: 20px;
+  line-height: 42px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -80,8 +80,8 @@ h1.title {
     position: absolute;
     right: 30px;
     color: red;
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: bold;
     color: rgba(119, 110, 101, 0.9);
     z-index: 100;

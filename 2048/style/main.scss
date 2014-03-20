@@ -66,12 +66,12 @@ h1.title {
 }
 
 .score-container, .best-container {
-  $height: 25px;
+  $height: 20px;
 
   position: relative;
   display: inline-block;
   background: $game-container-background;
-  padding: 15px 25px;
+  padding: 10px 25px;
   font-size: $height;
   height: $height;
   line-height: $height + 22px;
