@@ -3,7 +3,7 @@ var SPEED = 190;
 var GRAVITY = 15;
 var FLAP = 350;
 var SPAWN_RATE = 1 / 2;
-var OPENING = 230;
+var OPENING = 220;
 
 
 WebFontConfig = {
@@ -170,7 +170,14 @@ function create() {
     reset();
 }
 
+var hasStarted = false;
+
 function reset() {
+    if (!hasStarted) {
+        hasStarted = true;
+    } else {
+        window.addRandomTile();
+    }
     gameStarted = false;
     gameOver = false;
     score = 0;

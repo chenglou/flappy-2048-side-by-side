@@ -18,10 +18,11 @@
   }
   #screen {
     margin: 0 auto;
-    max-height:500px;
-    max-width:500px;
+    max-height:400px;
+    max-width:250px;
     position: relative;
     overflow: hidden;
+    display: inline-block;
   }
   </style>
 
@@ -31,7 +32,6 @@
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">Infinity</h1>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
@@ -93,6 +93,7 @@
 
   <script>
 	  window.flap = function() {};
+	  window.addRandomTile = function() {};
   </script>
 
   <script src="2048/js/animframe_polyfill.js"></script>

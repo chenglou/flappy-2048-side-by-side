@@ -1,13 +1,13 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
 
-$field-width: 500px;
+$field-width: 555px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 $tile-border-radius: 3px;
 
-$mobile-threshold: $field-width + 20px;
+$mobile-threshold: $field-width + 9999px;
 
 $text-color: #776E65;
 $bright-text-color: #f9f6f2;
@@ -31,7 +31,7 @@ html, body {
 }
 
 body {
-  margin: 80px 0;
+  margin: 20px 0;
 }
 
 .heading:after {
@@ -144,6 +144,7 @@ hr {
 .container {
   width: $field-width;
   margin: 0 auto;
+  position: relative;
 }
 
 @include keyframes(fade-in) {
@@ -171,7 +172,9 @@ hr {
 // Game field mixin used to render CSS at different width
 @mixin game-field {
   .game-container {
+    display: inline-block;
     margin-top: 40px;
+    margin-left: 20px;
     position: relative;
     padding: $grid-spacing;
 
@@ -467,18 +470,13 @@ hr {
     font-size: 15px;
   }
 
-  body {
-    margin: 20px 0;
-    padding: 0 20px;
-  }
-
   h1.title {
     font-size: 27px;
     margin-top: 15px;
   }
 
   .container {
-    width: $field-width;
+    width: 555px;
     margin: 0 auto;
   }
 
@@ -490,6 +488,8 @@ hr {
 
   .heading {
     margin-bottom: 10px;
+    position: absolute;
+    right: 0px;
   }
 
   // Render the game field at the right width
