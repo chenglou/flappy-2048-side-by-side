@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Pong</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="flappy-bird/assets/icon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="flappy-bird/assets/icon-120.png">
+
+  <style>
+  body {
+    background: #abc;
+    margin: 0;
+    padding: 0;
+  }
+  #screen {
+    margin: 0 auto;
+    max-height:500px;
+    max-width:500px;
+    position: relative;
+    overflow: hidden;
+  }
+  </style>
+
+  <link href="2048/style/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">Infinity</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+	  <div id="screen"></div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <hr>
+    <p>
+    	Flappy bird HTML created by <a href="https://github.com/uralozden">uralozden</a> using <a href="http://phaser.io">Phaser</a>,
+    	itself a fork of <a href="https://github.com/marksteve">marksteve</a>'s <a href="https://github.com/marksteve/dtmb">Heavy Bird</a>
+    </p>
+    <p>
+      2048 Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+  </div>
+
+  <script src="2048/js/animframe_polyfill.js"></script>
+  <script src="2048/js/keyboard_input_manager.js"></script>
+  <script src="2048/js/html_actuator.js"></script>
+  <script src="2048/js/grid.js"></script>
+  <script src="2048/js/tile.js"></script>
+  <script src="2048/js/local_score_manager.js"></script>
+  <script src="2048/js/game_manager.js"></script>
+  <script src="2048/js/application.js"></script>
+
+  <script src="flappy-bird/phaser.min.js"></script>
+  <script src="flappy-bird/main.js"></script>
+
+  <script>
+  	window.flappyReady = function(flap) {
+  	  window.addEventListener('keydown', flap);
+  	}
+  </script>
+</body>
+
+</html>
