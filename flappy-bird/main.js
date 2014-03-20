@@ -159,7 +159,8 @@ function create() {
     gameOverText.anchor.setTo(0.5, 0.5);
     gameOverText.scale.setTo(2, 2);
     // Add controls
-    window.flappyReady(flap);
+    window.flap = flap;
+    console.log(flap);
     // Start clouds timer
     cloudsTimer = new Phaser.Timer(game);
     cloudsTimer.onEvent.add(spawnCloud);
@@ -175,7 +176,6 @@ function reset() {
     score = 0;
     credits.renderable = true;
     scoreText.setText("DON'T\nTOUCH\nMY\nBIRDIE");
-    instText.setText("TOUCH TO FLAP\nBIRDIE WINGS");
     gameOverText.renderable = false;
     birdie.body.allowGravity = false;
     birdie.angle = 0;

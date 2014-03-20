@@ -91,6 +91,10 @@
     </p>
   </div>
 
+  <script>
+	  window.flap = function() {};
+  </script>
+
   <script src="2048/js/animframe_polyfill.js"></script>
   <script src="2048/js/keyboard_input_manager.js"></script>
   <script src="2048/js/html_actuator.js"></script>
@@ -102,12 +106,6 @@
 
   <script src="flappy-bird/phaser.min.js"></script>
   <script src="flappy-bird/main.js"></script>
-
-  <script>
-  	window.flappyReady = function(flap) {
-  	  window.addEventListener('keydown', flap);
-  	}
-  </script>
 </body>
 
 </html>
