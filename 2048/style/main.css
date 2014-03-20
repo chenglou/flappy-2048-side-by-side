@@ -147,7 +147,7 @@ hr {
 .game-container {
   display: inline-block;
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 21px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -514,12 +514,12 @@ hr {
   .heading {
     margin-bottom: 10px;
     position: absolute;
-    right: 0px; }
+    right: 1px; }
 
   .game-container {
     display: inline-block;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 21px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -685,3 +685,6 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+@media screen and (max-width: 575px) {
+  body {
+    margin: 0px; } }
