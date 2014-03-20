@@ -1,10 +1,9 @@
 var DEBUG = false;
 var SPEED = 190;
 var GRAVITY = 15;
-var FLAP = 350;
+var FLAP = 330;
 var SPAWN_RATE = 1 / 2;
-var OPENING = 200;
-
+var OPENING = 180;
 
 WebFontConfig = {
     google: { families: [ 'Press+Start+2P::latin' ] },
@@ -45,7 +44,7 @@ var game = new Phaser.Game(
 function preload() {
     var assets = {
         spritesheet: {
-            birdie: ['flappy-bird/assets/birdie.png', 24, 24],
+            birdie: ['flappy-bird/assets/birdie.png', 18, 18],
             clouds: ['flappy-bird/assets/clouds.png', 128, 64]
         },
         image: {
@@ -114,7 +113,7 @@ function create() {
     birdie.body.collideWorldBounds = true;
     birdie.body.gravity.y = GRAVITY;
     // Add fence
-    fence = game.add.tileSprite(0, game.world.height - 32, game.world.width, 32, 'fence');
+    fence = game.add.tileSprite(0, game.world.height - 12, game.world.width, 32, 'fence');
     fence.tileScale.setTo(2, 2);
     // Add score text
     scoreText = game.add.text(
@@ -201,7 +200,7 @@ function start() {
     fingersTimer = new Phaser.Timer(game);
     fingersTimer.onEvent.add(spawnFingers);
     fingersTimer.start();
-    fingersTimer.add(1);
+    fingersTimer.add(0.1);
     // Show score
     scoreText.setText(score);
     instText.renderable = false;
@@ -264,7 +263,7 @@ function spawnFinger(fingerY, flipped) {
 function spawnFingers() {
     fingersTimer.stop();
 
-    var fingerY = ((game.height - 16 - o() / 2) / 2) + (Math.random() > 0.5 ? -1 : 1) * Math.random() * game.height / 6;
+    var fingerY = ((game.height - 120 - o() / 2) / 2) + (Math.random() > 0.5 ? -1 : 1) * Math.random() * game.height / 6;
     // Bottom finger
     var botFinger = spawnFinger(fingerY);
     // Top finger (flipped)

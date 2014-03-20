@@ -8,7 +8,7 @@ html, body {
   font-size: 18px; }
 
 body {
-  margin: 20px 0; }
+  margin: 10px 0; }
 
 .heading:after {
   content: "";
@@ -58,9 +58,9 @@ h1.title {
   display: inline-block;
   background: #bbada0;
   padding: 10px 25px;
-  font-size: 20px;
-  height: 20px;
-  line-height: 42px;
+  font-size: 14px;
+  height: 14px;
+  line-height: 33px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -69,7 +69,7 @@ h1.title {
   .score-container:after, .best-container:after {
     position: absolute;
     width: 100%;
-    top: 10px;
+    top: 7px;
     left: 0;
     text-transform: uppercase;
     font-size: 13px;
@@ -80,8 +80,8 @@ h1.title {
     position: absolute;
     right: 30px;
     color: red;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 14px;
     font-weight: bold;
     color: rgba(119, 110, 101, 0.9);
     z-index: 100;
@@ -496,7 +496,7 @@ hr {
 
 @media screen and (max-width: 10554px) {
   html, body {
-    font-size: 15px; }
+    font-size: 12px; }
 
   h1.title {
     font-size: 27px;
@@ -508,7 +508,7 @@ hr {
 
   .score-container, .best-container {
     margin-top: 0;
-    padding: 15px 10px;
+    padding: 12px 10px;
     min-width: 40px; }
 
   .heading {
@@ -674,9 +674,6 @@ hr {
     -webkit-transform: translate(202px, 202px);
     -moz-transform: translate(202px, 202px);
     transform: translate(202px, 202px); }
-
-  .game-container {
-    margin-top: 20px; }
 
   .tile .tile-inner {
     font-size: 35px; }

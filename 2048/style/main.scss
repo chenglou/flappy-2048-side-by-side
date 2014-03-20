@@ -31,7 +31,7 @@ html, body {
 }
 
 body {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .heading:after {
@@ -66,7 +66,7 @@ h1.title {
 }
 
 .score-container, .best-container {
-  $height: 20px;
+  $height: 14px;
 
   position: relative;
   display: inline-block;
@@ -74,7 +74,7 @@ h1.title {
   padding: 10px 25px;
   font-size: $height;
   height: $height;
-  line-height: $height + 22px;
+  line-height: $height + 19px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -84,7 +84,7 @@ h1.title {
   &:after {
     position: absolute;
     width: 100%;
-    top: 10px;
+    top: 7px;
     left: 0;
     text-transform: uppercase;
     font-size: 13px;
@@ -467,7 +467,7 @@ hr {
   $tile-border-radius: 3px;
 
   html, body {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   h1.title {
@@ -482,7 +482,7 @@ hr {
 
   .score-container, .best-container {
     margin-top: 0;
-    padding: 15px 10px;
+    padding: 12px 10px;
     min-width: 40px;
   }
 
@@ -494,10 +494,6 @@ hr {
 
   // Render the game field at the right width
   @include game-field;
-
-  .game-container {
-    margin-top: 20px;
-  }
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
